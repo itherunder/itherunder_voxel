@@ -1332,7 +1332,6 @@ var EC;window.customElements.define("vox-viewer",class extends K{static get is()
  */
 console.warn("The main 'lit-element' module entrypoint is deprecated. Please update your imports to use the 'lit' package: 'lit' and 'lit/decorators.ts' or import from 'lit-element/lit-element.ts'. See https://lit.dev/msg/deprecated-import-path for more information.");class AC extends K{static get is(){return"demo-page"}static get properties(){return{selectedModel:{type:String}}}constructor(){super(),this.selectedModel="model"}onModelSelected(t){const e=this.shadowRoot.querySelector("#model-selection");console.log(e.value),this.selectedModel=e.value}render(){return D`
       <style>
-      
           :host
           {
               display: block;
@@ -1351,14 +1350,13 @@ console.warn("The main 'lit-element' module entrypoint is deprecated. Please upd
 
       <div class="container">
 
-          <vox-viewer 
-              src="to-replace-it" 
+          <vox-viewer
+              src="./test.vox"
               camera-controls
               auto-rotate
               shadow-intensity="0.3"
               style="height: calc(100vh - 50px); width: calc(100vh - 50px);"
           ></vox-viewer>
-          
       </div>
     `}}customElements.define(AC.is,AC)})()})();
       </script></head><body><demo-page></demo-page></body></html>
